@@ -261,7 +261,8 @@ virtualbox-guest-utils
 virtualenv
 virtualenvwrapper
 uwsgi
-uwsgi-plugin-python
+uwsgi-src
+uwsgi-plugin-python3
 zlib1g-dev"
 
     if [ "$@" = "dev" ]; then
