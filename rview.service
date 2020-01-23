@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve rview. This file goes in /etc/systemd/system
+After=network.target
+
+[Service]
+User=vagrant
+Group=www-data
+WorkingDirectory=/var/www/rview
+Environment="PATH=$PATH:/var/www/rview/venv/bin"
+ExecStart=/usr/bin/uwsgi --ini /vagrant/uwsgi_config.ini
+
+[Install]
+WantedBy=multi-user.target

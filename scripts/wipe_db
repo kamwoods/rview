@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sudo service postgresql restart
+sudo -u postgres dropdb rview_db
+sudo -u postgres createdb -O vagrant rview_db
