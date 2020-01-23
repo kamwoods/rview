@@ -228,7 +228,7 @@ class ImageFile(object):
             return ImgDetsFlds.DEFAULT
         try:
             tree = ET.parse(xml_file)
-        except IOError, _e:
+        except IOError as _e:
             logging.error(ExcepMess.PARSING, xml_file, _e)
             return
 
@@ -254,7 +254,7 @@ class ImageFile(object):
             return ImgPropsFlds.DEFAULT
         try:
             tree = ET.parse(xml_file)
-        except IOError, _e:
+        except IOError as _e:
             logging.error(ExcepMess.PARSING, xml_file, _e)
             return
 
