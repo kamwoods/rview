@@ -6,4 +6,4 @@ source venv/bin/activate
 # Set config format to disable logging debug, comment out for full logging
 export RVIEW_CONFIG='analyser'
 # Run the analyser
-python -m rview.image_analyser
+python3 -m rview.image_analyser

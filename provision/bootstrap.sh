@@ -299,7 +299,7 @@ install_ubuntu_pip_packages() {
         flask-wtf
         celery
         numpy
-        python-magic
+        python3-magic
         spacy
         shortuuid"
 
@@ -357,13 +357,13 @@ install_source_packages() {
         # without this!
         sed -i "s/java-8-oracle/java-8-openjdk-amd64/g" setup.py
 
-        python setup.py build >> $LOG_BASE/rview-install.log 2>&1
-        python setup.py install >> $LOG_BASE/rview-install.log 2>&1
+        python3 setup.py build >> $LOG_BASE/rview-install.log 2>&1
+        python3 setup.py install >> $LOG_BASE/rview-install.log 2>&1
         popd >> $LOG_BASE/rview-install.log 2>&1
 
         # Edit the Makefile to uncomment the config info for Linux.
         # First we look for the requred string in the makefile and copy the 5 lines
-        # strting from the 4th line after the pattern match, into a temp file (temp),
+        # starting from the 4th line after the pattern match, into a temp file (temp),
         # after removing the leading hash (to uncomment the lines).
 
         # Then we fix some paths for the virtualenv.
@@ -419,7 +419,7 @@ get_spacy_language_models() {
   echoinfo "rview: Getting language model(s) for spacy..."
   cd /tmp
   source "$RVIEW_ROOT/venv/bin/activate"
-  python -m spacy download en
+  python3 -m spacy download en
 }
 
 create_virtualenv() {
