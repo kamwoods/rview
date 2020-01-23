@@ -432,7 +432,7 @@ create_virtualenv() {
    mkdir "$RVIEW_ROOT"
    chmod -R 777 "$RVIEW_ROOT"
    chown -R www-data:www-data "$RVIEW_ROOT"
-   virtualenv "$RVIEW_ROOT/venv"
+   python3 -m venv "$RVIEW_ROOT/venv"
    source "$RVIEW_ROOT/venv/bin/activate"
 }
 
