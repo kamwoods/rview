@@ -300,7 +300,7 @@ install_ubuntu_pip_packages() {
         flask-wtf
         celery
         numpy
-        python3-magic
+        python-magic
         spacy
         shortuuid"
 
