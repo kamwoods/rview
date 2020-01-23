@@ -346,7 +346,7 @@ class ImageFile(object):
                 # start_offset.
                 try:
                     fs_info = pytsk3.FS_Info(image_info, offset=(part.start * 512))
-                except Exception, _:
+                except Exception as _:
                     # Exception, log and loop
                     logging.exception("Sleuthkit exception getting partion info, " \
                                       "slot: %i, table %d, desc: %s, for image path: %s.",
